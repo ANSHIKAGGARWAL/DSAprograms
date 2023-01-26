@@ -3,7 +3,7 @@
 void bubbleSort(int);
   
 //main body
-int mian() {
+int main() {
   cout<<"\t ENTER INTEGERS\n";
   int unsort[5],i;
   
@@ -26,6 +26,20 @@ void bubbleSort(int unsort[5]) {
      {
        if(unsort[j]>unsort[j+1];
           {
-            
+           unsort[j]=unsort[j]+unsort[j+1];
+           unsort[j+1]=unsort[j]-unsort[j+1];
+           unsort[j]=unsort[j]-unsort[j+1];
+           swap=1;
           }
-  
+     }
+     
+     for (x=0 ; x<=4 ; x++)
+     {
+       cout << "\t" << unsort[x];
+     }
+   if (swap == 0)
+    break;
+    cout << "\n";
+}
+}
+            
