@@ -16,7 +16,7 @@ int main() {
 
 //Defining bubbleSort function
 void bubbleSort(int unsort[5]) {
-  int i,j,x,swap=;
+  int i,j,x,swap;
   //including swap bubbleSort becomes efficient algorithm
   
   for(i=0;i<4;i++)
