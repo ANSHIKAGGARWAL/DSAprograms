@@ -129,3 +129,71 @@ void printRevNode()
 	    std::cout<< temp -> data;
     }
 }
+
+void searchNode()
+{
+    int flag = 0 , pos = 0 , value;
+    temp = start ;
+    std::cout<<"ENTER THE VALUE YOU WANT TO SEARCH :- \n";
+    std::cin>>value;
+    
+    if( start == NULL)
+    std::cout<<"LINKED LIST IS EMPTY\n";
+
+    else
+    {
+        while( temp -> next != NULL)
+        {
+            pos++;
+            if( value == temp->data)
+            {
+                std::cout<<"Data is found at NODE number :- "<<pos;
+                flag = 1;
+            }
+            temp = temp -> next;
+        }
+
+        if( value == temp-> data)
+        {
+            pos++;
+            std::cout<<"Data is found at NODE number :- "<<pos;
+               flag = 1;
+        }
+
+        if(flag != 1)
+            std::cout<<"Data is not found \n";
+    }
+}
+
+void insertion_beginning()  
+{   
+   int item;  
+   NN = (struct node *)malloc(sizeof(struct node));  
+   if(NN == NULL)  
+   {  
+       printf("\nOVERFLOW");  
+   }  
+   else  
+   {  
+    printf("\nEnter Item value");  
+    scanf("%d",&item);  
+      
+   if(start==NULL)  
+   {  
+       NN-> next = NULL;  
+       NN-> previous = NULL;  
+       NN->data = item;  
+       temp = NN;  
+   }  
+   else   
+   {  
+        printf("Entered value is inserted\n");
+       NN->data=item;  
+       NN->previous=NULL;  
+       NN->next = start;  
+       start -> previous=NN;  
+       start = NN;  
+   }  
+   printf("\nNode inserted\n");  
+}  
+}
